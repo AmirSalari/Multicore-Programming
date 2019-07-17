@@ -1,0 +1,20 @@
+﻿  Source.cpp
+  Change configuration to Release for a fast execution.
+  Change platform to x64 for more memory.
+  Enable nested parallelism if you wish to have parallel region within parallel region.
+Source.cpp(157): warning #3180: unrecognized OpenMP #pragma
+    #pragma omp parallel sections num_threads(4)  
+            ^
+  
+Source.cpp(159): warning #3180: unrecognized OpenMP #pragma
+    #pragma omp section 
+            ^
+  
+Source.cpp(161): warning #3180: unrecognized OpenMP #pragma
+    #pragma omp section
+            ^
+  
+Source.obj : error LNK2019: unresolved external symbol _omp_get_max_threads referenced in function "void __cdecl check_omp(void)" (?check_omp@@YAXXZ)
+Source.obj : error LNK2019: unresolved external symbol _omp_get_nested referenced in function "void __cdecl check_omp(void)" (?check_omp@@YAXXZ)
+Source.obj : error LNK2019: unresolved external symbol _omp_get_wtime referenced in function _main
+C:\Users\Amir\Desktop\Term8\Multicore programming\HW\HW3\HW3\MergeSort\Debug\MergeSort.exe : fatal error LNK1120: 3 unresolved externals
